@@ -26,8 +26,15 @@ body {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 h1 {
@@ -56,10 +63,13 @@ h1 {
 
 .preview-container {
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .preview-img {
     max-width: 100%;
+    width: 400px;
     height: auto;
     border-radius: 10px;
     border: 1px solid #ddd;
@@ -83,7 +93,8 @@ h1 {
     color: #555;
 }
 
-.control-group input, .control-group select {
+.control-group input,
+.control-group select {
     flex: 2;
     padding: 10px;
     border-radius: 5px;
