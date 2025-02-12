@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Resizer & Compressor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Image Resizer & Compressor</h1>
+        <div class="drop-area" id="dropArea">
+            <p>Drag & Drop an Image Here or Click to Upload</p>
+        </div>
+        <input type="file" id="imageInput" accept="image/*" style="display: none;">
+        <div class="preview-container">
+            <img id="previewImg" class="preview-img" src="#" alt="Image Preview" style="display: none;">
+        </div>
+        <div class="controls">
+            <div class="control-group">
+                <label for="widthInput">Width:</label>
+                <input type="number" id="widthInput" placeholder="Auto">
+            </div>
+            <div class="control-group">
+                <label for="heightInput">Height:</label>
+                <input type="number" id="heightInput" placeholder="Auto">
+            </div>
+            <div class="control-group">
+                <label for="aspectRatioLock">Lock Aspect Ratio:</label>
+                <input type="checkbox" id="aspectRatioLock" checked>
+            </div>
+            <div class="control-group">
+                <label for="fileTypeSelect">File Type:</label>
+                <select id="fileTypeSelect">
+                    <option value="image/jpeg">JPEG</option>
+                    <option value="image/png">PNG</option>
+                    <option value="image/webp">WebP</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="qualityInput">Quality (0.1 - 1.0):</label>
+                <input type="number" id="qualityInput" min="0.1" max="1.0" step="0.1" value="0.8">
+            </div>
+        </div>
+        <button onclick="applyResize()">Resize & Compress</button>
+        <div class="loading-spinner" id="loadingSpinner">Processing...</div>
+        <div class="error-message" id="errorMessage"></div>
+        <a id="downloadLink" class="download-link">Download Image</a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

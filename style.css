@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    padding: 20px;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-in-out;
+    max-width: 800px;
+    width: 100%;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.drop-area {
+    border: 2px dashed #007bff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.drop-area:hover {
+    background: rgba(0, 123, 255, 0.1);
+}
+
+.drop-area p {
+    margin: 0;
+    color: #007bff;
+}
+
+.preview-container {
+    margin-bottom: 20px;
+}
+
+.preview-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.control-group label {
+    flex: 1;
+    text-align: left;
+    color: #555;
+}
+
+.control-group input, .control-group select {
+    flex: 2;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.control-group input[type="checkbox"] {
+    flex: none;
+    width: 20px;
+    height: 20px;
+}
+
+button {
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.download-link {
+    display: none;
+    margin-top: 20px;
+    padding: 10px;
+    background: #28a745;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.download-link:hover {
+    background: #218838;
+}
+
+.loading-spinner {
+    display: none;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #007bff;
+}
+
+.error-message {
+    display: none;
+    margin-top: 10px;
+    color: #dc3545;
+    font-size: 14px;
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 20px;
+    }
+
+    .control-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
